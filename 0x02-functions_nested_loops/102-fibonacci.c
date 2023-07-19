@@ -7,21 +7,22 @@
 */
 int main(void)
 {
+	unsigned long int term1 = 1;
+	unsigned long int term2 = 2;
+	unsigned long int next;
+	int i;
 
-	int count;
-
-	unsigned long fib1 = 0, fib2 = 1, sum;
-
-	for (count = 0; count < 50; count++)
+	printf("%lu, ", term1);
+	for (i = 1 ; i < 50 ; i++)
 	{
-		sum = fib1 + fib2;
-		printf("%lu", sum);
-		fib1 = fib2;
-		fib2 = sum;
-		if (count == 49)
-			printf("\n");
-		else
+		printf("%lu", term2);
+		next = term1 + term2;
+		term1 = term2;
+		term2 = next;
+		if (i != 49)
 			printf(", ");
-		return (0);
 	}
+	printf("\n");
+	return (0);
+
 }
