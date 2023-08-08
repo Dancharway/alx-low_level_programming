@@ -1,0 +1,1 @@
+Static de la libre
